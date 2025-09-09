@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CardCostApplication.Migrations
 {
-    [DbContext(typeof(ClearingCostDbContext))]
+    [DbContext(typeof(CardCostDbContext))]
     [Migration("20250908181744_InitialCreate")]
     partial class InitialCreate
     {

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CardCostApplication.Migrations
 {
-    [DbContext(typeof(ClearingCostDbContext))]
+    [DbContext(typeof(CardCostDbContext))]
     partial class ClearingCostDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
