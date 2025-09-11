@@ -9,5 +9,6 @@ namespace CardCostApplication.Infrastructure.Persistence
 			: base(options) { }
 
 		public DbSet<ClearingCost> ClearingCosts { get; set; } = null!;
+		public DbSet<User> Users { get; set; } = null!;
 	}
 }
