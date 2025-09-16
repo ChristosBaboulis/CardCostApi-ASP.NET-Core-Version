@@ -13,6 +13,8 @@ builder.Services.AddDbContext<CardCostDbContext>(options =>
 builder.Services.AddScoped<IClearingCostRepository, ClearingCostRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
