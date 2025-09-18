@@ -14,6 +14,9 @@ namespace CardCostApplication.Infrastructure.Repositories
 			_context = context;
 		}
 
+		public async Task<List<ClearingCost>> GetAllAsync() =>
+			await _context.ClearingCosts.AsNoTracking().ToListAsync();
+
 		public async Task<ClearingCost?> FindByIdAsync(long id)
 		{
 			return await _context.ClearingCosts.FindAsync(id);
@@ -28,6 +31,15 @@ namespace CardCostApplication.Infrastructure.Repositories
 		public async Task AddAsync(ClearingCost entity)
 		{
 			await _context.ClearingCosts.AddAsync(entity);
+		}
+
+		public void Update(ClearingCost entity) =>
+			_context.ClearingCosts.Update(entity);
+
+		public async Task DeleteByIdAsync(long id)
+		{
+			var entity = await _context.ClearingCosts.FindAsync(id);
+			if (entity != null) _context.ClearingCosts.Remove(entity);
 		}
 
 		public async Task SaveChangesAsync()
