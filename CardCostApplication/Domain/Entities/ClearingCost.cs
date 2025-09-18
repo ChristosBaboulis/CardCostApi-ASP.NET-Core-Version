@@ -12,6 +12,7 @@ namespace CardCostApplication.Domain.Entities
 		
 		[Column("country_code")]
 		[Required]
+		[MaxLength(10)]
 		public string CountryCode { get; set; } = string.Empty;
 
 		[Column("cost")]

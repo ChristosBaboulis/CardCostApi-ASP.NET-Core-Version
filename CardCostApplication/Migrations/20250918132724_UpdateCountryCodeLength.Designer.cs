@@ -3,6 +3,7 @@ using CardCostApplication.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CardCostApplication.Migrations
 {
     [DbContext(typeof(CardCostDbContext))]
-    partial class ClearingCostDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250918132724_UpdateCountryCodeLength")]
+    partial class UpdateCountryCodeLength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
