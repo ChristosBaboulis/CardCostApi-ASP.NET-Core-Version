@@ -2,12 +2,14 @@
 using CardCostApplication.Application.Interfaces;
 using CardCostApplication.Contracts.Responses;
 using CardCostApplication.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CardCostApplication.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")] // /api/clearing-costs
+	[Authorize]
 	public class ClearingCostsController : ControllerBase
 	{
 		private readonly IClearingCostService _service;
