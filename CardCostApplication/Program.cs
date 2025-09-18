@@ -14,6 +14,7 @@ builder.Services.AddDbContext<CardCostDbContext>(options =>
 builder.Services.AddScoped<IClearingCostRepository, ClearingCostRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IClearingCostService, ClearingCostService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
